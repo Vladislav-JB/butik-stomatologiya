@@ -77,7 +77,7 @@
   .hero--left .hero__seal { right: clamp(2rem, 8vw, 9rem); }
   .hero--right .hero__seal { left: clamp(2rem, 8vw, 9rem); }
   .hero__seal b { font-family: var(--v-font-display); font-size: 2.4rem; line-height: .9; font-weight: var(--v-display-weight); }
-  .hero__seal span { font-size: .7rem; letter-spacing: var(--v-track-wide); text-transform: uppercase; font-weight: 600; line-height: 1.3; }
+  .hero__seal span { padding-inline: .7rem; font-size: .7rem; letter-spacing: var(--v-track-wide); text-transform: uppercase; font-weight: 600; line-height: 1.3; }
   @media (max-height: 760px) and (min-width: 861px) { .hero__copy .v-display { font-size: var(--v-t-2xl); } .hero__copy { bottom: clamp(3rem, 9vh, 5rem); } }
   @media (max-width: 860px) {
     .hero__back img { object-position: var(--hero-pos-m, 50% 30%); }
@@ -327,11 +327,16 @@
   .reviews__src { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 36ch; }
   .foot__demo { flex-basis: 100%; }
   /* первый экран: кадр сдвинут влево, чтобы лицо не уходило под текст справа */
-  @media (min-width: 861px) { .hero__back img { width: 132%; left: -34%; } }
+  @media (min-width: 861px) {
+    .hero__back img { width: 150%; left: -56%; }
+    .hero__copy { width: min(36rem, 40vw); }
+    .hero__scrim { background: linear-gradient(to left, rgb(var(--canvas-rgb) / .96) 0%, rgb(var(--canvas-rgb) / .9) 38%, rgb(var(--canvas-rgb) / .35) 56%, transparent 70%); }
+  }
   /* телефон: фото сверху, текст ниже на светлом фоне – улыбка не прячется под текст */
   @media (max-width: 860px) {
-    .hero__back img { height: 62%; top: 0; width: 100%; left: 0; }
-    .hero__scrim { background: linear-gradient(to top, var(--v-canvas) 0%, var(--v-canvas) 40%, rgb(var(--canvas-rgb) / .6) 50%, transparent 62%); }
+    .hero__back img { height: 50%; top: 0; width: 100%; left: 0; }
+    .hero__sub { display: none; }
+    .hero__scrim { background: linear-gradient(to top, var(--v-canvas) 0%, var(--v-canvas) 50%, rgb(var(--canvas-rgb) / .5) 56%, transparent 64%); }
     .bar__mark { font-size: 1.4rem; }
   }
 </style>
@@ -363,7 +368,7 @@
         <div class="hero__scrim" aria-hidden="true"></div>
         <div class="hero__floor" aria-hidden="true"></div>
         <div class="v-layer" data-v-parallax="-0.2">
-          <p class="hero__seal"><b>∞</b><span>гарантия<br>на имплантацию</span></p>
+          <p class="hero__seal"><b>∞</b><span>гарантия<br>на импланты</span></p>
         </div>
 
         <div class="v-copy hero__copy" data-v-cue="0 0.86 0 0.12">
