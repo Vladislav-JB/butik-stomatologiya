@@ -314,7 +314,7 @@
     --v-track-tight: -0.005em;
     --canvas-rgb: 246 241 234; --surface-rgb: 255 252 247; --accent-rgb: 106 79 134;
     --page-bg: #f6f1ea; --mark-radius: 50%;
-    --hero-pos: 30% 45%; --hero-pos-m: 50% 62%;
+    --hero-pos: 50% 50%; --hero-pos-m: 50% 62%;
     --timer-max: 90;
     --trust-bg: #2c2a33; --trust-ink: #f6f1ea; --trust-soft: #c4bdcc; --trust-accent: #cfb8e8; --trust-hair: rgb(246 241 234 / .16);
   }
@@ -326,9 +326,9 @@
   .hero__sub { display: block; margin-top: var(--v-3); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
   .reviews__src { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 36ch; }
   .foot__demo { flex-basis: 100%; }
-  /* первый экран: кадр сдвинут влево, чтобы лицо не уходило под текст справа */
+  /* первый экран: кресло слева, текст справа на светлой стене */
   @media (min-width: 861px) {
-    .hero__back img { width: 150%; left: -56%; }
+    .hero__back img { width: 112%; left: -6%; }
     .hero__copy { width: min(36rem, 40vw); }
     .hero__scrim { background: linear-gradient(to left, rgb(var(--canvas-rgb) / .96) 0%, rgb(var(--canvas-rgb) / .9) 38%, rgb(var(--canvas-rgb) / .35) 56%, transparent 70%); }
   }
