@@ -20,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@1,700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%236a4f86%27/%3E%3Cpath d=%27M16 6l2.6 6.4 6.9.5-5.3 4.4 1.7 6.7L16 20.4 10.1 24l1.7-6.7-5.3-4.4 6.9-.5z%27 fill=%27%23f6f1ea%27/%3E%3C/svg%3E">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Dentist","name":"Лаванда","description":"Бутик-стоматология: имплантация с пожизненной гарантией, ортопедия, ортодонтия, отбеливание Zoom-4.","url":"https://vladislav-jb.github.io/butik-stomatologiya","image":"https://vladislav-jb.github.io/butik-stomatologiya/assets/og.jpg","telephone":"+7 (900) 000-00-00","openingHours":"пн–сб 9:00–20:00","address":{"@type":"PostalAddress","streetAddress":"ул. Садовая, 21","addressCountry":"RU"}}
@@ -326,6 +327,12 @@
   .hero__sub { display: block; margin-top: var(--v-3); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
   .reviews__src { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 36ch; }
   .foot__demo { flex-basis: 100%; }
+  .foot__made { display: inline-block; white-space: nowrap; font-style: italic; font-size: var(--v-t-sm); line-height: 1.4; color: var(--v-ink-soft); padding: .4em 0; }
+  .foot__made a { margin-left: .3em; text-decoration: none; font-family: Calibri, "Carlito", sans-serif; font-weight: 700; font-style: italic; font-size: 1.12em; } /* Calibri мельче на глаз – выравниваем по высоте букв с «Создан в» */
+  .foot__made a:hover { color: var(--v-ink); text-decoration: underline; text-underline-offset: .18em; }
+  .foot__made img { display: inline-block; width: 40px; height: 52px; margin-left: .35em; vertical-align: -7px; } /* низ надписи – на уровне низа венка, ленточки ниже строки */
+  .foot { align-items: center; }
+  @media (max-width: 860px) { .foot__made { font-size: 1rem; } }
   /* первый экран: кресло слева, текст справа на светлой стене */
   @media (min-width: 861px) {
     .hero__back img { width: 112%; left: -6%; }
@@ -591,7 +598,7 @@
         </div>
         <footer class="foot">
           <span>Бутик-стоматология «Лаванда»</span>
-          <span class="foot__more">Фото: <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash</a>, <a href="https://kie.ai" target="_blank" rel="noopener">kie.ai</a></span>
+          <span class="foot__made">Создан в <a href="http://web-atelie.ru/" target="_blank" rel="noopener">«Веб-Ателье»</a><img src="assets/web-atelie.png" alt="" width="40" height="52" loading="lazy" decoding="async"></span>
           <span class="foot__demo">Демо-концепт лендинга бутик-стоматологии. Название, контакты, цены и отзывы условные, фото – из стоковой библиотеки.</span>
         </footer>
       </div>
